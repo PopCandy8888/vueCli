@@ -1,0 +1,570 @@
+{
+  "flowId": "8a8080aa6d6cc427016d6ccb7d310001",
+  "diagram": {
+    "linkFromPortIdProperty": "fromPort",
+    "linkToPortIdProperty": "toPort",
+    "nodeDataArray": [
+      {
+        "category": "BEGIN",
+        "text": "读取数据",
+        "key": "4028d0816d72aefe016d72b61608000f",
+        "loc": "-433.6800231933594 -97"
+      },
+      {
+        "category": "END",
+        "text": "加载数据",
+        "key": "4028d0816d72aefe016d72b6d5070012",
+        "loc": "107.95993041992188 30"
+      },
+      {
+        "category": "ACTION",
+        "text": "数据治理：API数据写入",
+        "key": "4028ff816dc9b20d016dca0d908f0019",
+        "loc": "78.1889877319336 110"
+      }
+    ],
+    "linkDataArray": [
+      {
+        "from": "4028d0816d72aefe016d72b61608000f",
+        "to": "4028d0816d72aefe016d72b6d5070012",
+        "fromPort": "R",
+        "toPort": "L",
+        "points": [
+          -404.36005,
+          -97,
+          -394.36005,
+          -97,
+          -162.86005,
+          -97,
+          -162.86005,
+          30,
+          68.63995,
+          30,
+          78.63995,
+          30
+        ]
+      },
+      {
+        "from": "4028ff816dc9b20d016dca0d908f0019",
+        "to": "4028d0816d72aefe016d72b61608000f",
+        "fromPort": "L",
+        "toPort": "B",
+        "points": [
+          0,
+          110,
+          -10,
+          110,
+          -433.68002,
+          110,
+          -433.68002,
+          26.5,
+          -433.68002,
+          -57,
+          -433.68002,
+          -67
+        ]
+      }
+    ]
+  },
+  "flowType": "TDataFlow",
+  "stages": [
+    {
+      "xType": "TDataStage",
+      "xValue": {
+        "content": { "settings": "" },
+        "operator": {
+          "xType": "TBeanInfo",
+          "xValue": {
+            "singleton": true,
+            "code": "ApiWriter",
+            "className": "com.ifdata.dataflow.writer.ApiWriter",
+            "beanType": "BACK",
+            "name": "数据治理：API数据写入器",
+            "comment": "数据流",
+            "id": "80b12642360147bd892f69a07409a30"
+          }
+        },
+        "id": "4028ff816dc9b20d016dca0d908f0019",
+        "flow": {
+          "xType": "TDataFlow",
+          "xValue": {
+            "checking": true,
+            "server": {
+              "xType": "TServer",
+              "xValue": {
+                "sshPort": 22,
+                "hostName": "yf209",
+                "userPassword": "$infor3810$",
+                "address": "10.0.0.209",
+                "os": "CentOS-7",
+                "userAccount": "root",
+                "id": "8a8080516cb204d1016cb244eb110005"
+              }
+            },
+            "id": "8a8080aa6d6cc427016d6ccb7d310001",
+            "group": {
+              "xType": "TSystemParam",
+              "xValue": {
+                "parent": {
+                  "xType": "TSystemParam",
+                  "xValue": {
+                    "index": 0,
+                    "valueType": "STRING",
+                    "name": "数据流组别",
+                    "id": "4028d0816c669230016c6692dfa10004"
+                  }
+                },
+                "code": "SparkDataFlow",
+                "index": 10,
+                "valueType": "STRING",
+                "name": "Spark数据流",
+                "id": "4028d0816c696361016c69650d0b0007"
+              }
+            },
+            "cleaning": true,
+            "published": false,
+            "priority": "MIDDLE",
+            "diagram": {
+              "linkFromPortIdProperty": "fromPort",
+              "linkToPortIdProperty": "toPort",
+              "nodes": [
+                {
+                  "category": "BEGIN",
+                  "text": "读取数据",
+                  "key": "4028d0816d72aefe016d72b61608000f",
+                  "loc": "-433.6800231933594 -97"
+                },
+                {
+                  "category": "END",
+                  "text": "加载数据",
+                  "key": "4028d0816d72aefe016d72b6d5070012",
+                  "loc": "107.95993041992188 30"
+                },
+                {
+                  "category": "ACTION",
+                  "text": "数据治理：API数据写入",
+                  "key": "4028ff816dc9b20d016dca0d908f0019",
+                  "loc": "78.1889877319336 110"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "4028d0816d72aefe016d72b61608000f",
+                  "to": "4028d0816d72aefe016d72b6d5070012",
+                  "fromPort": "R",
+                  "toPort": "L",
+                  "points": [
+                    -404.36005,
+                    -97,
+                    -394.36005,
+                    -97,
+                    -162.86005,
+                    -97,
+                    -162.86005,
+                    30,
+                    68.63995,
+                    30,
+                    78.63995,
+                    30
+                  ]
+                },
+                {
+                  "from": "4028ff816dc9b20d016dca0d908f0019",
+                  "to": "4028d0816d72aefe016d72b61608000f",
+                  "fromPort": "L",
+                  "toPort": "B",
+                  "points": [
+                    0,
+                    110,
+                    -10,
+                    110,
+                    -433.68002,
+                    110,
+                    -433.68002,
+                    26.5,
+                    -433.68002,
+                    -57,
+                    -433.68002,
+                    -67
+                  ]
+                }
+              ]
+            },
+            "pipeline": {
+              "xType": "TBeanInfo",
+              "xValue": {
+                "singleton": false,
+                "code": "spark.dataflow.pipeline",
+                "className": "com.ifdata.spark.dataflow.SparkPipeline",
+                "beanType": "BACK",
+                "name": "数据流管线--Spark",
+                "comment": "数据流",
+                "id": "4028d0816c66a486016c66a990ca0008"
+              }
+            },
+            "schedule": {
+              "xType": "TSchedule",
+              "xValue": {
+                "minute": 0,
+                "duration": 0,
+                "timerType": "TIME",
+                "hour": 0,
+                "name": "0点执行",
+                "id": "4028d0816d72ca9b016d72ccb22d000a",
+                "day": 0,
+                "timeUnit": "DAY"
+              }
+            },
+            "createTime": { "xType": "date", "xValue": "2019-10-18 00:00:00" },
+            "name": "Spark数据采集",
+            "errorPolicy": "STOP",
+            "saveStageData": false,
+            "flowType": "ETL"
+          }
+        },
+        "index": 0,
+        "nodeType": "ACTION",
+        "name": "数据治理：API数据写入",
+        "truePath": true
+      }
+    },
+    {
+      "xType": "TDataStage",
+      "xValue": {
+        "content": {
+          "settings": "",
+          "whereClause": "",
+          "table": "4028d0816c62b02d016c62b2772131db",
+          "tableName": "tf_bs_vecgoods",
+          "pkColumn": "",
+          "tsColumn": "",
+          "columnsAlias": "",
+          "rowTypeName": "NONE",
+          "jdbcConn": "1bbbcbd5-7795-4f9c-8f7f-2bebb0a0fc51",
+          "extractor": "4028d0816c94dcc0016c94f5b8080009",
+          "partitionColumn": "SYSOPERTIME"
+        },
+        "operator": {
+          "xType": "TBeanInfo",
+          "xValue": {
+            "singleton": true,
+            "code": "TableReader",
+            "className": "com.ifdata.dataflow.reader.TableReader",
+            "beanType": "BACK",
+            "name": "数据治理：JDBC数据表抽取器",
+            "comment": "数据流",
+            "id": "4028d0816c6afc31016c6afc58250002"
+          }
+        },
+        "id": "4028d0816d72aefe016d72b61608000f",
+        "flow": {
+          "xType": "TDataFlow",
+          "xValue": {
+            "checking": true,
+            "server": {
+              "xType": "TServer",
+              "xValue": {
+                "sshPort": 22,
+                "hostName": "yf209",
+                "userPassword": "$infor3810$",
+                "address": "10.0.0.209",
+                "os": "CentOS-7",
+                "userAccount": "root",
+                "id": "8a8080516cb204d1016cb244eb110005"
+              }
+            },
+            "id": "8a8080aa6d6cc427016d6ccb7d310001",
+            "group": {
+              "xType": "TSystemParam",
+              "xValue": {
+                "parent": {
+                  "xType": "TSystemParam",
+                  "xValue": {
+                    "index": 0,
+                    "valueType": "STRING",
+                    "name": "数据流组别",
+                    "id": "4028d0816c669230016c6692dfa10004"
+                  }
+                },
+                "code": "SparkDataFlow",
+                "index": 10,
+                "valueType": "STRING",
+                "name": "Spark数据流",
+                "id": "4028d0816c696361016c69650d0b0007"
+              }
+            },
+            "cleaning": true,
+            "published": false,
+            "priority": "MIDDLE",
+            "diagram": {
+              "linkFromPortIdProperty": "fromPort",
+              "linkToPortIdProperty": "toPort",
+              "nodes": [
+                {
+                  "category": "BEGIN",
+                  "text": "读取数据",
+                  "key": "4028d0816d72aefe016d72b61608000f",
+                  "loc": "-433.6800231933594 -97"
+                },
+                {
+                  "category": "END",
+                  "text": "加载数据",
+                  "key": "4028d0816d72aefe016d72b6d5070012",
+                  "loc": "107.95993041992188 30"
+                },
+                {
+                  "category": "ACTION",
+                  "text": "数据治理：API数据写入",
+                  "key": "4028ff816dc9b20d016dca0d908f0019",
+                  "loc": "78.1889877319336 110"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "4028d0816d72aefe016d72b61608000f",
+                  "to": "4028d0816d72aefe016d72b6d5070012",
+                  "fromPort": "R",
+                  "toPort": "L",
+                  "points": [
+                    -404.36005,
+                    -97,
+                    -394.36005,
+                    -97,
+                    -162.86005,
+                    -97,
+                    -162.86005,
+                    30,
+                    68.63995,
+                    30,
+                    78.63995,
+                    30
+                  ]
+                },
+                {
+                  "from": "4028ff816dc9b20d016dca0d908f0019",
+                  "to": "4028d0816d72aefe016d72b61608000f",
+                  "fromPort": "L",
+                  "toPort": "B",
+                  "points": [
+                    0,
+                    110,
+                    -10,
+                    110,
+                    -433.68002,
+                    110,
+                    -433.68002,
+                    26.5,
+                    -433.68002,
+                    -57,
+                    -433.68002,
+                    -67
+                  ]
+                }
+              ]
+            },
+            "pipeline": {
+              "xType": "TBeanInfo",
+              "xValue": {
+                "singleton": false,
+                "code": "spark.dataflow.pipeline",
+                "className": "com.ifdata.spark.dataflow.SparkPipeline",
+                "beanType": "BACK",
+                "name": "数据流管线--Spark",
+                "comment": "数据流",
+                "id": "4028d0816c66a486016c66a990ca0008"
+              }
+            },
+            "schedule": {
+              "xType": "TSchedule",
+              "xValue": {
+                "minute": 0,
+                "duration": 0,
+                "timerType": "TIME",
+                "hour": 0,
+                "name": "0点执行",
+                "id": "4028d0816d72ca9b016d72ccb22d000a",
+                "day": 0,
+                "timeUnit": "DAY"
+              }
+            },
+            "createTime": { "xType": "date", "xValue": "2019-10-18 00:00:00" },
+            "name": "Spark数据采集",
+            "errorPolicy": "STOP",
+            "saveStageData": false,
+            "flowType": "ETL"
+          }
+        },
+        "index": 10,
+        "nodeType": "BEGIN",
+        "name": "读取数据",
+        "truePath": true
+      }
+    },
+    {
+      "xType": "TDataStage",
+      "xValue": {
+        "content": {
+          "tableName": "TABLE1",
+          "overwrite": "",
+          "keyColumn": "",
+          "jdbcConn": "91dce448-6235-4db8-adfc-41f9c073774c",
+          "textlist": ""
+        },
+        "operator": {
+          "xType": "TBeanInfo",
+          "xValue": {
+            "singleton": true,
+            "code": "SparkJdbcWriter",
+            "className": "com.ifdata.spark.dataflow.writer.SparkJdbcWriter",
+            "beanType": "BACK",
+            "name": "数据治理：JDBC写入器--Spark",
+            "comment": "数据流",
+            "id": "4028d0816c6b0de2016c6b0e0d200000"
+          }
+        },
+        "id": "4028d0816d72aefe016d72b6d5070012",
+        "flow": {
+          "xType": "TDataFlow",
+          "xValue": {
+            "checking": true,
+            "server": {
+              "xType": "TServer",
+              "xValue": {
+                "sshPort": 22,
+                "hostName": "yf209",
+                "userPassword": "$infor3810$",
+                "address": "10.0.0.209",
+                "os": "CentOS-7",
+                "userAccount": "root",
+                "id": "8a8080516cb204d1016cb244eb110005"
+              }
+            },
+            "id": "8a8080aa6d6cc427016d6ccb7d310001",
+            "group": {
+              "xType": "TSystemParam",
+              "xValue": {
+                "parent": {
+                  "xType": "TSystemParam",
+                  "xValue": {
+                    "index": 0,
+                    "valueType": "STRING",
+                    "name": "数据流组别",
+                    "id": "4028d0816c669230016c6692dfa10004"
+                  }
+                },
+                "code": "SparkDataFlow",
+                "index": 10,
+                "valueType": "STRING",
+                "name": "Spark数据流",
+                "id": "4028d0816c696361016c69650d0b0007"
+              }
+            },
+            "cleaning": true,
+            "published": false,
+            "priority": "MIDDLE",
+            "diagram": {
+              "linkFromPortIdProperty": "fromPort",
+              "linkToPortIdProperty": "toPort",
+              "nodes": [
+                {
+                  "category": "BEGIN",
+                  "text": "读取数据",
+                  "key": "4028d0816d72aefe016d72b61608000f",
+                  "loc": "-433.6800231933594 -97"
+                },
+                {
+                  "category": "END",
+                  "text": "加载数据",
+                  "key": "4028d0816d72aefe016d72b6d5070012",
+                  "loc": "107.95993041992188 30"
+                },
+                {
+                  "category": "ACTION",
+                  "text": "数据治理：API数据写入",
+                  "key": "4028ff816dc9b20d016dca0d908f0019",
+                  "loc": "78.1889877319336 110"
+                }
+              ],
+              "edges": [
+                {
+                  "from": "4028d0816d72aefe016d72b61608000f",
+                  "to": "4028d0816d72aefe016d72b6d5070012",
+                  "fromPort": "R",
+                  "toPort": "L",
+                  "points": [
+                    -404.36005,
+                    -97,
+                    -394.36005,
+                    -97,
+                    -162.86005,
+                    -97,
+                    -162.86005,
+                    30,
+                    68.63995,
+                    30,
+                    78.63995,
+                    30
+                  ]
+                },
+                {
+                  "from": "4028ff816dc9b20d016dca0d908f0019",
+                  "to": "4028d0816d72aefe016d72b61608000f",
+                  "fromPort": "L",
+                  "toPort": "B",
+                  "points": [
+                    0,
+                    110,
+                    -10,
+                    110,
+                    -433.68002,
+                    110,
+                    -433.68002,
+                    26.5,
+                    -433.68002,
+                    -57,
+                    -433.68002,
+                    -67
+                  ]
+                }
+              ]
+            },
+            "pipeline": {
+              "xType": "TBeanInfo",
+              "xValue": {
+                "singleton": false,
+                "code": "spark.dataflow.pipeline",
+                "className": "com.ifdata.spark.dataflow.SparkPipeline",
+                "beanType": "BACK",
+                "name": "数据流管线--Spark",
+                "comment": "数据流",
+                "id": "4028d0816c66a486016c66a990ca0008"
+              }
+            },
+            "schedule": {
+              "xType": "TSchedule",
+              "xValue": {
+                "minute": 0,
+                "duration": 0,
+                "timerType": "TIME",
+                "hour": 0,
+                "name": "0点执行",
+                "id": "4028d0816d72ca9b016d72ccb22d000a",
+                "day": 0,
+                "timeUnit": "DAY"
+              }
+            },
+            "createTime": { "xType": "date", "xValue": "2019-10-18 00:00:00" },
+            "name": "Spark数据采集",
+            "errorPolicy": "STOP",
+            "saveStageData": false,
+            "flowType": "ETL"
+          }
+        },
+        "index": 20,
+        "nodeType": "END",
+        "name": "加载数据",
+        "truePath": true
+      }
+    }
+  ]
+}

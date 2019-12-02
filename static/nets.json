@@ -1,0 +1,51 @@
+{
+    "xType": "com.ifdata.orm.data.SvcResult",
+    "xValue": {
+        "userData": {
+            "netHourAvg": {
+                "xType": "java.util.concurrent.ConcurrentHashMap",
+                "xValue": [
+                    {
+                        "xKey": "15:52",
+                        "xValue": {
+                            "xType": "com.ifdata.data.Pair",
+                            "xValue": {
+                                "value": {
+                                    "xType": "NetStatus",
+                                    "xValue": {
+                                        "sendBags": 0,
+                                        "sendBytes": 0,
+                                        "recvErrors": 0,
+                                        "recvDrops": 0,
+                                        "sendDrops": 0,
+                                        "recvBags": 0,
+                                        "recvBytes": 0,
+                                        "sendErrors": 0,
+                                        "speed": 0
+                                    }
+                                },
+                                "key": {
+                                    "xType": "NetStatus",
+                                    "xValue": {
+                                        "sendBags": 0,
+                                        "sendBytes": 0,
+                                        "recvErrors": 0,
+                                        "recvDrops": 0,
+                                        "sendDrops": 0,
+                                        "recvBags": 0,
+                                        "recvBytes": 0,
+                                        "sendErrors": 0,
+                                        "speed": 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "netInDayAvg": "",
+            "netOutDayAvg": ""
+        },
+        "passed": true
+    }
+}

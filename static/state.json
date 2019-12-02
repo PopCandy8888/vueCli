@@ -1,0 +1,89 @@
+{
+  "xType": "com.ifdata.orm.data.SvcResult",
+  "xValue": {
+    "userData": {
+      "parentEvent": {
+        "xType": "TTaskEvent",
+        "xValue": {
+          "doneRows": 0,
+          "taskType": "TDataFlow",
+          "taskState": "CANCEL",
+          "beginTime": { "xType": "timestamp", "xValue": 1569926746000 },
+          "id": "8a8080516d86e79f016d86ed11580006",
+          "doneBytes": 0,
+          "taskName": "Spark数据采集",
+          "endTime": { "xType": "timestamp", "xValue": 1570852945000 },
+          "taskId": "8a8080aa6d6cc427016d6ccb7d310001"
+        }
+      },
+      "childrenEvents": {
+        "xType": "org.hibernate.collection.internal.PersistentSet",
+        "xValue": [
+          {
+            "xType": "TTaskEvent",
+            "xValue": {
+              "parent": {
+                "xType": "TTaskEvent",
+                "xValue": {
+                  "doneRows": 0,
+                  "taskType": "TDataFlow",
+                  "taskState": "CANCEL",
+                  "beginTime": {
+                    "xType": "timestamp",
+                    "xValue": 1569926746000
+                  },
+                  "id": "8a8080516d86e79f016d86ed11580006",
+                  "doneBytes": 0,
+                  "taskName": "Spark数据采集",
+                  "endTime": { "xType": "timestamp", "xValue": 1570852945000 },
+                  "taskId": "8a8080aa6d6cc427016d6ccb7d310001"
+                }
+              },
+              "doneRows": 0,
+              "taskType": "TDataStage",
+              "taskState": "SUCCESS",
+              "beginTime": { "xType": "timestamp", "xValue": 1569926746000 },
+              "id": "8a8080516d86e79f016d86ed115d0007",
+              "message": "数据流【Spark数据采集】的【读取数据】已完成！",
+              "doneBytes": 0,
+              "taskName": "读取数据",
+              "endTime": { "xType": "timestamp", "xValue": 1569926747000 },
+              "taskId": "4028d0816d72aefe016d72b61608000f"
+            }
+          },
+          {
+            "xType": "TTaskEvent",
+            "xValue": {
+              "parent": {
+                "xType": "TTaskEvent",
+                "xValue": {
+                  "doneRows": 0,
+                  "taskType": "TDataFlow",
+                  "taskState": "CANCEL",
+                  "beginTime": {
+                    "xType": "timestamp",
+                    "xValue": 1569926746000
+                  },
+                  "id": "8a8080516d86e79f016d86ed11580006",
+                  "doneBytes": 0,
+                  "taskName": "Spark数据采集",
+                  "endTime": { "xType": "timestamp", "xValue": 1570852945000 },
+                  "taskId": "8a8080aa6d6cc427016d6ccb7d310001"
+                }
+              },
+              "doneRows": 0,
+              "taskType": "TDataStage",
+              "taskState": "RUNNING",
+              "beginTime": { "xType": "timestamp", "xValue": 1569926747000 },
+              "id": "8a8080516d86e79f016d86ed11bc0008",
+              "doneBytes": 0,
+              "taskName": "加载数据",
+              "taskId": "4028d0816d72aefe016d72b6d5070012"
+            }
+          }
+        ]
+      }
+    },
+    "passed": true
+  }
+}
