@@ -14,7 +14,7 @@
     "@ncform/ncform": "^1.4.0",
     "@ncform/ncform-common": "^1.4.0",
     "@ncform/ncform-theme-elementui": "^1.5.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "echarts": "^4.3.0",
     "element-ui": "^2.11.1",
     "gojs": "^2.0.17",
